@@ -15,6 +15,15 @@ public class Movie {
         this.isInColor = isInColor;
         this.lengthInMinutes = lengthInMinutes;
         this.genre = genre;
+        //*Override /toString
+        @Override
+        public String toString() {
+            return(title, director, yearCreated, isInColor,lengthInMinutes, genre);
+        }
+
+
+
+
 
     }
 
