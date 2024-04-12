@@ -1,13 +1,13 @@
 public class Movie {
     //Attributter
-    private String title;
-    private String director;
-    private int yearCreated;
-    private boolean isInColor;
-    private double lengthInMinutes;
-    private String genre;
+     String title;
+     String director;
+     int yearCreated;
+     boolean isInColor;
+     double lengthInMinutes;
+     String genre;
 
-    //Parametre
+    //Konstruktør
     public Movie(String title, String director, int yearCreated, boolean isInColor, double lengthInMinutes, String genre) {
         this.title = title;
         this.director = director;
@@ -15,34 +15,43 @@ public class Movie {
         this.isInColor = isInColor;
         this.lengthInMinutes = lengthInMinutes;
         this.genre = genre;
-        //*Override /toString
-        @Override
-        public String toString() {
-            return(title, director, yearCreated, isInColor,lengthInMinutes, genre);
-        }
-
-
-
-
 
     }
+    //Getter-metoden
 
     public String getTitle() {
-        return title;
+        return this.title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDirector() {
-        return director;
+        return this.director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
     }
 
     public int getYearCreated() {
-        return yearCreated;
+        return this.yearCreated;
 
     }
 
-    public boolean isInColor() {
-        return isInColor;
+    public void setYearCreated(int yearCreated) {
+        this.yearCreated = yearCreated;
+
+    }
+
+    public boolean IsInColor() {
+        return this.isInColor;
+
+    }
+
+    public void setIsInColor(boolean isInColor) {
+            this.isInColor = isInColor;
 
     }
 
@@ -51,8 +60,26 @@ public class Movie {
 
     }
 
-    public String getGenre() {
-        return genre;
+    public void setLengthInMinutes(double newLengthMinutes) {
+        this.lengthInMinutes = newLengthMinutes;
     }
 
+    public String getGenre() {
+        return this.genre;
+
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    @Override
+    public String toString() {
+        return "Title: " + title + "\n" +
+                "Director:'" + director + "\n" +
+                "Year Created: " + yearCreated + "\n" +
+                "Color: " + (isInColor? "Yes" : "No") + "\n" +
+                "Length (Minutes): " + lengthInMinutes + "\n" +
+                "Genre: " + genre + "\n";
+    }
 }
